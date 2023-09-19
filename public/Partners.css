@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
+
+:root{
+    --main-color:1C6758;
+    --green2:rgba(120, 229, 185, 0.05);
+    --yallow:rgb(242, 211, 38);
+    --v:rgb(129, 247, 180);
+}
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive; 
+}
+body{
+    overflow-x: hidden;
+    position: relative;
+
+
+}
+ span{
+font-size: 1.2rem;
+font-weight: bold;
+
+ }
+ pre{
+    font-size: 1rem;
+    padding-left: 2rem;
+ }
+
+.heading{
+    text-align: center;
+    padding-top: 2rem;
+    color:1C6758;
+    text-transform: uppercase;
+    font-size: 3rem;
+    background:rgba(48, 157, 113, 0.05);
+
+}
+section{
+    min-height: 100vh;
+    padding:0.5rem 5%;
+    padding-top: 2rem;
+  
+}
+.heading span{
+    color:var(--main-color);
+    text-transform: uppercase;
+}
+.container{
+    width: 100%;
+     
+    background:rgba(255, 255, 255, 0.05);
+   
+   
+}
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    line-height: 80px;
+    z-index: 111;
+    position: fixed;
+    background-color: rgb(242, 211, 38);
+}
+.logo{
+  display: flex;
+ padding-top: 10px;  
+}
+.navitem{
+    display: flex;
+}
+.navitem li{
+    list-style: none;
+    margin: 0 15px;
+}
+.navitem li a{
+    font-size: 18px;
+    color: black;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+ul li il.dropdown li{
+    display: block;
+    
+}
+ul li ul.dropdown{
+    width: 16rem;
+    height: 14rem;
+    background: #000;
+    position: absolute;
+    z-index: 2;
+    display: none;
+    opacity: 0.8;
+
+
+}
+ul li ul.dropdown a:hover{
+border: 0.3rem solid rgb(253, 253, 253);
+
+
+}
+ul li:hover ul.dropdown{
+    display: block;
+    line-height: 3;
+}
+ul li ul.dropdown a{
+
+font-size: 15px;
+padding: 5px;
+}
+
+
+
+.navitem li:hover a, .links a:hover{
+
+color: rgb(255, 255, 255);
+}
+.links a{
+    font-size: 30px;
+    color:black;
+    margin: 25px 10px;
+}
+
+.field .box-container{
+    padding: 1rem;
+    padding-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap:1.3rem;
+}
+
+.field .box-container .box{
+    border-radius: .6rem;
+    background:var(--green2);
+    text-align: center;
+    padding:2.1rem;
+
+}
+
+.field .box-container .box i{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    border-radius: 50%;
+    font-size: 2.3rem;
+    background-color:1C6758;
+    color:var(--yallow);
+}
+
+.field .box-container .box h3{
+    font-size: 2rem;
+    color:#000000;
+    padding:1rem 0;
+}
+
+.field .box-container .box p{
+    font-size: 1.3rem;
+    color:#000000;
+    line-height: 1.8;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+}
+
+
+.pricing .box-container{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.2rem;
+}
+
+.pricing .box-container .box{
+    background:rgb(213, 226, 225);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    padding:1rem;
+    text-align: left;
+    height: 40rem;
+
+
+}
+
+.pricing .box-container .box h3{
+    padding:1rem;
+    background-color: rgb(242, 211, 38);
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    color:black;
+    text-align: center;
+}
+
+.pricing .box-container .box .price{
+    padding-top: 2rem;
+    padding-left: 5rem;
+}
+
+.pricing .box-container .box .price span{
+    font-size: 2rem;
+    color:black;
+}
+
+.pricing .box-container .box .price .amount{
+    font-size: 5rem;
+    color:black;
+    font-weight: bolder;
+   
+}
+
+.pricing .box-container .box ul{
+    padding: .5rem 0;
+    list-style: none;
+    padding-left: 2rem;
+}
+
+.pricing .box-container .box ul li{
+    padding-left: 0;
+    padding: 1rem 0;
+    font-size: 1rem;
+    color:black;
+}
+.pricing .box .btn{
+padding-left: 5rem;
+}
+
+.footer{
+    background:#1C6758 ;
+    padding:1rem 3%;
+    
+   
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 2rem;
+    
+}
+
+.footer .box-container .box{
+    flex:1 1 15rem;
+    margin:2rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.4rem;
+    color:#fff;
+    padding:1rem 0;
+    font-weight: normal;
+}
+
+.footer .box-container .box p{
+    font-size: 1.2rem;
+    color:#eee;
+    padding:1rem 0;
+}
+
+.footer .box-container .box a{
+    font-size: 1.2rem;
+    color:#eee;
+    padding:1rem 0;
+    display: block;
+}
+
+.footer .box-container .box a:hover{
+    color:var(--yallow);
+}
+
+.footer .box-container .box p i{
+    padding-right: .5rem;
+    color:var(--yallow);
+}
+
+.footer .credit{
+    font-size: 1.6rem;
+    text-align: center;
+    border-top: .2rem solid rgba(255,255,255,.7);
+    padding:2rem 1rem;
+    font-weight: normal;
+    letter-spacing: .1rem;
+    color:#fff;
+}
+
+.footer .credit a{
+    color:var(--yallow);
+}
+.btn {
+    font-size: 1.7rem;
+    padding:.7rem 4rem;
+    border-radius: 5rem;
+    margin-top: 0.2rem;
+    color:var(--main-color);
+    cursor: pointer;
+    background:#fff;
+    border:.2rem solid black;
+    text-decoration: none;
+    
+
+
+}
+.btn:hover{
+    background:#BAD7E9;
+}

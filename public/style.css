@@ -508,7 +508,7 @@ section{
 
 /* media queries  */
 
-@media (max-width:991px){
+/* @media (max-width:991px){
 
     html{
         font-size: 55%;
@@ -522,7 +522,7 @@ section{
         padding:2rem;
     }
 
-}
+} */
 
 @media (max-width:768px){
 
@@ -563,9 +563,9 @@ section{
 
 @media (max-width:450px){
 
-    html{
+    /* html{
         font-size: 50%;
-    }
+    } */
 
     .home .home-slider .swiper-slide{
         width: 27rem;

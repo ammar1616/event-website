@@ -1,6 +1,6 @@
-const { contactus_clients, joinus_speaker, joinus_sponsor, joinus_partner, joinus_exhibitor, joinus_volunteer } = require("../models/user.model")
+const { contactus_clients, joinus_speaker, joinus_sponsor, joinus_partner, joinus_exhibitor, joinus_volunteer, ticket } = require("../models/user.model")
 
-exports.contactus = async(req, res) => {
+exports.contactus = async (req, res) => {
     let { name, email, number, subject, message } = req.body
     contactus_clients.create({
         name,
@@ -13,7 +13,7 @@ exports.contactus = async(req, res) => {
 }
 
 
-exports.speaker = async(req, res) => {
+exports.speaker = async (req, res) => {
     let { name, email, job_title, company_name, number, country } = req.body
     joinus_speaker.create({
         name,
@@ -26,7 +26,7 @@ exports.speaker = async(req, res) => {
     res.redirect('/')
 }
 
-exports.sponsor = async(req, res) => {
+exports.sponsor = async (req, res) => {
     let { name, email, job_title, company_name, number, country } = req.body
     joinus_sponsor.create({
         name,
@@ -39,7 +39,7 @@ exports.sponsor = async(req, res) => {
     res.redirect('/')
 }
 
-exports.partner = async(req, res) => {
+exports.partner = async (req, res) => {
     let { name, email, job_title, company_name, number, web_url, country } = req.body
     joinus_partner.create({
         name,
@@ -53,7 +53,7 @@ exports.partner = async(req, res) => {
     res.redirect('/')
 }
 
-exports.exhibitor = async(req, res) => {
+exports.exhibitor = async (req, res) => {
     let { name, email, job_title, company_name, number, country, startup_or_corporate } = req.body
     joinus_exhibitor.create({
         name,
@@ -67,7 +67,7 @@ exports.exhibitor = async(req, res) => {
     res.redirect('/')
 }
 
-exports.volunteer = async(req, res) => {
+exports.volunteer = async (req, res) => {
     let { name, email, job_title, company_name, number, dateofbirth, city, fb_url, edu, attend_before, committee, accomodation } = req.body
     joinus_volunteer.create({
         name,
@@ -83,5 +83,12 @@ exports.volunteer = async(req, res) => {
         committee,
         accomodation
     })
+    res.redirect('/')
+}
+
+exports.ticket = async (req, res) => {
+    const { name, email, phone, ticketId } = req.body
+    console.log(req.body);
+    ticket.create({ name, email, phone, ticketId })
     res.redirect('/')
 }

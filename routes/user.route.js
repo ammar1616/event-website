@@ -1,14 +1,16 @@
 const router = require("express").Router()
 
-const authcontroller = require("../controllers/user.controller")
+const usercontroller = require("../controllers/user.controller")
 
-router.post("/contactus", authcontroller.contactus)
-router.post("/speaker", authcontroller.speaker)
+router.post("/contactus", usercontroller.contactus)
+router.post("/speaker", usercontroller.speaker)
 
-router.post("/sponsor", authcontroller.sponsor)
-router.post("/partner", authcontroller.partner)
-router.post("/exhibitor", authcontroller.exhibitor)
-router.post("/volunteer", authcontroller.volunteer)
+router.post("/sponsor", usercontroller.sponsor)
+router.post("/partner", usercontroller.partner)
+router.post("/exhibitor", usercontroller.exhibitor)
+router.post("/volunteer", usercontroller.volunteer)
+
+router.post("/ticket", usercontroller.ticket)
 
 
 module.exports = router

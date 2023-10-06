@@ -1,26 +1,26 @@
-const sequelize = require("sequelize")
+const { DataTypes } = require("sequelize")
 const objsequelize = require("../configuration/config")
 
 const contactus_clients = objsequelize.define("contactus_client", {
     name: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     email: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
         unique: true
     },
     number: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     subject: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     message: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
 })
@@ -28,28 +28,28 @@ const contactus_clients = objsequelize.define("contactus_client", {
 
 const joinus_speaker = objsequelize.define("joinus_speaker", {
     name: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     email: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
         unique: true
     },
     job_title: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     company_name: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     number: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     country: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
 })
@@ -57,60 +57,60 @@ const joinus_speaker = objsequelize.define("joinus_speaker", {
 
 const joinus_sponsor = objsequelize.define("joinus_sponsor", {
     name: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     email: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
         unique: true
     },
     job_title: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     company_name: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     number: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     country: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
 })
 
 const joinus_partner = objsequelize.define("joinus_partner", {
     name: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     email: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
         unique: true
     },
     job_title: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     company_name: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     number: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     web_url: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     country: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
 })
@@ -119,87 +119,108 @@ const joinus_partner = objsequelize.define("joinus_partner", {
 
 const joinus_exhibitor = objsequelize.define("joinus_exhibitor", {
     name: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     email: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
         unique: true
     },
     job_title: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     company_name: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     number: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     country: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     startup_or_corporate: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
 })
 
 const joinus_volunteer = objsequelize.define("joinus_volunteer", {
     name: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     email: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
         unique: true
     },
     job_title: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     company_name: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     number: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     dateofbirth: {
-        type: sequelize.DATEONLY,
+        type: DataTypes.DATEONLY,
         allowNull: false
     },
     city: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     fb_url: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     education: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     attend_before: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     committee: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     accomodation: {
-        type: sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
 
+})
+
+
+const ticket = objsequelize.define("ticket", {
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true
+    },
+    phone: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    ticketId: {
+        type: DataTypes.STRING,
+        allowNull: false
+    }
 })
 
 
@@ -210,5 +231,6 @@ module.exports = {
     joinus_sponsor,
     joinus_partner,
     joinus_exhibitor,
-    joinus_volunteer
+    joinus_volunteer,
+    ticket
 }
